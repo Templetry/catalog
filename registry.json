@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "templates": [
+    {
+      "name": "kmp-native-base",
+      "repo": "Templetry/kmp-native-base",
+      "ref": "main",
+      "platform": "multiplatform",
+      "framework": "kmp",
+      "description": "Kotlin Multiplatform base — Android + Desktop + iOS, modular clean architecture, convention plugins"
+    },
+    {
+      "name": "android-native-base",
+      "repo": "Templetry/android-native-base",
+      "ref": "main",
+      "platform": "android",
+      "framework": "android",
+      "description": "Android native base — modular clean architecture, convention plugins, Compose"
+    },
+    {
+      "name": "compose-multiplatform-app",
+      "repo": "Templetry/compose-multiplatform-app",
+      "ref": "main",
+      "platform": "multiplatform",
+      "framework": "compose-multiplatform",
+      "description": "Compose Multiplatform app — Android, iOS, Desktop and Web from one codebase"
+    }
+  ]
+}
