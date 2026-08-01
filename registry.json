@@ -1,29 +1,56 @@
 {
-  "schema_version": 1,
-  "templates": [
+  "schema_version": 2,
+  "parents": [
     {
-      "name": "kmp-native-base",
-      "repo": "Templetry/kmp-native-base",
+      "key": "kmp",
+      "label": "Kotlin Multiplatform",
+      "repo": "Templetry/kmp",
       "ref": "main",
-      "platform": "multiplatform",
-      "framework": "kmp",
-      "description": "Kotlin Multiplatform base — Android + Desktop + iOS, modular clean architecture, convention plugins"
+      "forms": [
+        {
+          "form": "modular-features",
+          "name": "kmp-modular-features",
+          "path": "modular-features",
+          "status": "ready",
+          "description": "Multi-module production base — Android + Desktop + iOS, core/data/domain/feature layers, convention plugins"
+        },
+        {
+          "form": "single-module",
+          "name": "kmp-single-module",
+          "path": "single-module",
+          "status": "ready",
+          "description": "Single-module starter — Android, iOS, Desktop and Web/Wasm"
+        },
+        {
+          "form": "modular-ui",
+          "name": "kmp-modular-ui",
+          "path": "modular-ui",
+          "status": "planned",
+          "description": "Multi-module base with a single ui layer instead of feature modules"
+        }
+      ]
     },
     {
-      "name": "android-native-base",
-      "repo": "Templetry/android-native-base",
+      "key": "android",
+      "label": "Android native",
+      "repo": "Templetry/android",
       "ref": "main",
-      "platform": "android",
-      "framework": "android",
-      "description": "Android native base — modular clean architecture, convention plugins, Compose"
-    },
-    {
-      "name": "compose-multiplatform-app",
-      "repo": "Templetry/compose-multiplatform-app",
-      "ref": "main",
-      "platform": "multiplatform",
-      "framework": "compose-multiplatform",
-      "description": "Compose Multiplatform app — Android, iOS, Desktop and Web from one codebase"
+      "forms": [
+        {
+          "form": "modular-features",
+          "name": "android-modular-features",
+          "path": "modular-features",
+          "status": "ready",
+          "description": "Multi-module production base — core/data/domain/feature layers, convention plugins, Compose"
+        },
+        {
+          "form": "single-module",
+          "name": "android-single-module",
+          "path": "single-module",
+          "status": "planned",
+          "description": "Single-module starter"
+        }
+      ]
     }
   ]
 }
