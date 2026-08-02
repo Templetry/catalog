@@ -15,15 +15,18 @@ The official template registry for [Templetry](https://github.com/Templetry). `r
 | [kmp](https://github.com/Templetry/kmp) | `modular-features` ✅ · `single-module` ✅ · `modular-ui` 🏗️ planned |
 | [android](https://github.com/Templetry/android) | `modular-features` ✅ · `single-module` 🏗️ planned |
 
-## Using a form today
+## Using a form
+
+One command — the [CLI](https://github.com/Templetry/engine/releases) (v0.2.0+) reads this registry, fetches the form and renders it:
 
 ```sh
-git clone https://github.com/Templetry/kmp
-templetry render --template ./kmp/modular-features --out ./my-app \
-  --set "project_name=My App" --set "base_package=com.me.myapp"
+templetry list
+templetry init kmp/single-module --out ./my-app \
+  --set "project_name=My App" --set "base_package=com.me.myapp" \
+  --feature web=false
 ```
 
-Remote fetching (`templetry init kmp/modular-features`) lands with engine Phase 2.
+`templetry render --template <local-dir>` still works for local checkouts, and `--registry <url|file>` points `init`/`list` at an alternative catalog.
 
 ## Registry format
 
