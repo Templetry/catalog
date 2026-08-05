@@ -14,6 +14,7 @@ The official template registry for [Templetry](https://github.com/Templetry). `r
 |---|---|
 | [kmp](https://github.com/Templetry/kmp) | `modular-features` ✅ · `single-module` ✅ · `modular-ui` 🏗️ planned |
 | [android](https://github.com/Templetry/android) | `modular-features` ✅ · `single-module` 🏗️ planned |
+| [meta](https://github.com/Templetry/meta) | `template` ✅ — creates new Templetry templates (start your own catalog here) |
 
 ## Using a form
 

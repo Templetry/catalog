@@ -31,6 +31,21 @@
       ]
     },
     {
+      "key": "meta",
+      "label": "Templetry meta",
+      "repo": "Templetry/meta",
+      "ref": "main",
+      "forms": [
+        {
+          "form": "template",
+          "name": "meta-template",
+          "path": "template",
+          "status": "ready",
+          "description": "Create a new Templetry template: pre-filled manifest, author guide, mechanism showcase and verify CI"
+        }
+      ]
+    },
+    {
       "key": "android",
       "label": "Android native",
       "repo": "Templetry/android",
