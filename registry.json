@@ -25,7 +25,7 @@
           "form": "modular-ui",
           "name": "kmp-modular-ui",
           "path": "modular-ui",
-          "status": "planned",
+          "status": "ready",
           "description": "Multi-module base with a single ui layer instead of feature modules"
         }
       ]
