@@ -62,8 +62,8 @@
           "form": "single-module",
           "name": "android-single-module",
           "path": "single-module",
-          "status": "planned",
-          "description": "Single-module starter"
+          "status": "ready",
+          "description": "Single-module starter — one app module, Kotlin + Compose Material 3, selectable min SDK"
         }
       ]
     }
