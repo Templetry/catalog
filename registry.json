@@ -182,6 +182,13 @@
           "path": "nextjs",
           "status": "ready",
           "description": "Next.js app — App Router, TypeScript, optional route handler API and Vitest"
+        },
+        {
+          "form": "svelte-spa",
+          "name": "web-svelte-spa",
+          "path": "svelte-spa",
+          "status": "ready",
+          "description": "Svelte 5 SPA — Vite + TypeScript, runes, optional Vitest"
         }
       ]
     },
