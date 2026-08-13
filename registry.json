@@ -46,6 +46,28 @@
       ]
     },
     {
+      "key": "rust",
+      "label": "Rust",
+      "repo": "Templetry/rust",
+      "ref": "main",
+      "forms": [
+        {
+          "form": "cli",
+          "name": "rust-cli",
+          "path": "cli",
+          "status": "ready",
+          "description": "CLI — clap derive, lib + bin split, unit tests"
+        },
+        {
+          "form": "axum-service",
+          "name": "rust-axum-service",
+          "path": "axum-service",
+          "status": "ready",
+          "description": "HTTP service — axum + tokio, handler tests, optional Dockerfile"
+        }
+      ]
+    },
+    {
       "key": "go",
       "label": "Go",
       "repo": "Templetry/go",
@@ -94,6 +116,13 @@
           "path": "fastapi-service",
           "status": "ready",
           "description": "FastAPI service — src layout, pytest with TestClient, optional Dockerfile"
+        },
+        {
+          "form": "cli-typer",
+          "name": "python-cli-typer",
+          "path": "cli-typer",
+          "status": "ready",
+          "description": "CLI — Typer commands, src layout, pytest with CliRunner"
         }
       ]
     },
@@ -139,6 +168,20 @@
           "path": "react-spa",
           "status": "ready",
           "description": "React SPA — Vite + TypeScript, optional Router and Vitest, presets full/minimal"
+        },
+        {
+          "form": "vue-spa",
+          "name": "web-vue-spa",
+          "path": "vue-spa",
+          "status": "ready",
+          "description": "Vue 3 SPA — Vite + TypeScript, script setup, optional Router and Vitest"
+        },
+        {
+          "form": "nextjs",
+          "name": "web-nextjs",
+          "path": "nextjs",
+          "status": "ready",
+          "description": "Next.js app — App Router, TypeScript, optional route handler API and Vitest"
         }
       ]
     },
