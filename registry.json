@@ -46,6 +46,21 @@
       ]
     },
     {
+      "key": "web",
+      "label": "Web",
+      "repo": "Templetry/web",
+      "ref": "main",
+      "forms": [
+        {
+          "form": "react-spa",
+          "name": "web-react-spa",
+          "path": "react-spa",
+          "status": "ready",
+          "description": "React SPA — Vite + TypeScript, optional Router and Vitest, presets full/minimal"
+        }
+      ]
+    },
+    {
       "key": "android",
       "label": "Android native",
       "repo": "Templetry/android",
