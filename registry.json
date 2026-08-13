@@ -46,6 +46,88 @@
       ]
     },
     {
+      "key": "go",
+      "label": "Go",
+      "repo": "Templetry/go",
+      "ref": "main",
+      "forms": [
+        {
+          "form": "cli",
+          "name": "go-cli",
+          "path": "cli",
+          "status": "ready",
+          "description": "CLI starter — stdlib flags, versioned binary, table-driven tests"
+        },
+        {
+          "form": "http-service",
+          "name": "go-http-service",
+          "path": "http-service",
+          "status": "ready",
+          "description": "HTTP service — stdlib mux (1.22 patterns), httptest suite, distroless Dockerfile"
+        }
+      ]
+    },
+    {
+      "key": "node",
+      "label": "Node.js",
+      "repo": "Templetry/node",
+      "ref": "main",
+      "forms": [
+        {
+          "form": "express-api",
+          "name": "node-express-api",
+          "path": "express-api",
+          "status": "ready",
+          "description": "Express API — TypeScript (NodeNext), Vitest, optional Dockerfile, presets full/minimal"
+        }
+      ]
+    },
+    {
+      "key": "python",
+      "label": "Python",
+      "repo": "Templetry/python",
+      "ref": "main",
+      "forms": [
+        {
+          "form": "fastapi-service",
+          "name": "python-fastapi-service",
+          "path": "fastapi-service",
+          "status": "ready",
+          "description": "FastAPI service — src layout, pytest with TestClient, optional Dockerfile"
+        }
+      ]
+    },
+    {
+      "key": "jvm",
+      "label": "JVM",
+      "repo": "Templetry/jvm",
+      "ref": "main",
+      "forms": [
+        {
+          "form": "spring-boot",
+          "name": "jvm-spring-boot",
+          "path": "spring-boot",
+          "status": "ready",
+          "description": "Spring Boot service — Kotlin, Gradle Kotlin DSL, web starter, RANDOM_PORT tests"
+        }
+      ]
+    },
+    {
+      "key": "dotnet",
+      "label": ".NET",
+      "repo": "Templetry/dotnet",
+      "ref": "main",
+      "forms": [
+        {
+          "form": "minimal-api",
+          "name": "dotnet-minimal-api",
+          "path": "minimal-api",
+          "status": "ready",
+          "description": "Minimal API — C# top-level program, xUnit with WebApplicationFactory"
+        }
+      ]
+    },
+    {
       "key": "web",
       "label": "Web",
       "repo": "Templetry/web",
