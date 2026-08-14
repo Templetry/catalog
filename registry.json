@@ -86,6 +86,13 @@
           "path": "http-service",
           "status": "ready",
           "description": "HTTP service — stdlib mux (1.22 patterns), httptest suite, distroless Dockerfile"
+        },
+        {
+          "form": "rest-sqlite",
+          "name": "go-rest-sqlite",
+          "path": "rest-sqlite",
+          "status": "ready",
+          "description": "REST API over SQLite — pure-Go driver (no CGO), migrations, repositories, crud-resource piece per entity"
         }
       ]
     },
