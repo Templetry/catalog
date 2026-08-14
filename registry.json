@@ -123,6 +123,13 @@
           "path": "cli-typer",
           "status": "ready",
           "description": "CLI — Typer commands, src layout, pytest with CliRunner"
+        },
+        {
+          "form": "fastapi-users",
+          "name": "python-fastapi-users",
+          "path": "fastapi-users",
+          "status": "ready",
+          "description": "User management API — SQLModel/SQLite, argon2 hashing, JWT auth, crud-resource piece per entity"
         }
       ]
     },
