@@ -19,6 +19,7 @@ Every form is CI-verified: its parent's workflow renders it and builds the outpu
 |---|---|---|
 | [kmp](https://github.com/Templetry/kmp) | `modular-features` · `single-module` · `modular-ui` | — |
 | [android](https://github.com/Templetry/android) | `modular-features` · `single-module` | — |
+| [ios](https://github.com/Templetry/ios) | `swiftui-app` | — |
 | [web](https://github.com/Templetry/web) | `react-spa` · `vue-spa` · `nextjs` · `svelte-spa` | `axios-api`, `zustand-store`, `pinia-store`, `zod-env` |
 | [go](https://github.com/Templetry/go) | `cli` · `http-service` · `rest-sqlite` | `version-endpoint`, `crud-resource` |
 | [python](https://github.com/Templetry/python) | `fastapi-service` · `cli-typer` · `fastapi-users` | `rbac`, `api-keys`, `audit-trail`, `soft-delete`, `verifactu`, `crud-resource` |

@@ -505,6 +505,31 @@
           ]
         }
       ]
+    },
+    {
+      "key": "ios",
+      "label": "iOS",
+      "repo": "Templetry/ios",
+      "ref": "main",
+      "forms": [
+        {
+          "form": "swiftui-app",
+          "name": "ios-swiftui-app",
+          "path": "swiftui-app",
+          "status": "ready",
+          "description": "SwiftUI app — XcodeGen project, @Observable view models, optional SwiftData and async/await networking, XCTest",
+          "kinds": [
+            "ios"
+          ],
+          "languages": [
+            "swift"
+          ],
+          "frameworks": [
+            "swiftui",
+            "xcodegen"
+          ]
+        }
+      ]
     }
   ]
 }
