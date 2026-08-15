@@ -181,6 +181,13 @@
           "path": "minimal-api",
           "status": "ready",
           "description": "Minimal API — C# top-level program, xUnit with WebApplicationFactory"
+        },
+        {
+          "form": "razor-web",
+          "name": "dotnet-razor-web",
+          "path": "razor-web",
+          "status": "ready",
+          "description": "Razor Pages web app — shared layout, static files, server-side validation, xUnit with WebApplicationFactory"
         }
       ]
     },

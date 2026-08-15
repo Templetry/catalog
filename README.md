@@ -25,7 +25,7 @@ Every form is CI-verified: its parent's workflow renders it and builds the outpu
 | [rust](https://github.com/Templetry/rust) | `cli` · `axum-service` | — |
 | [node](https://github.com/Templetry/node) | `express-api` | — |
 | [jvm](https://github.com/Templetry/jvm) | `spring-boot` | — |
-| [dotnet](https://github.com/Templetry/dotnet) | `minimal-api` | — |
+| [dotnet](https://github.com/Templetry/dotnet) | `minimal-api` · `razor-web` | — |
 | [meta](https://github.com/Templetry/meta) | `template` — creates new Templetry templates (start your own catalog here) | — |
 
 ## Using a form
