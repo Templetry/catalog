@@ -1,38 +1,56 @@
 # Templetry default catalog
 
-The official template registry for [Templetry](https://github.com/Templetry). `registry.json` (schema v2) lists every **parent** and its **forms**; the engine and the future web app read it to offer the catalog.
+The official template registry for [Templetry](https://github.com/Templetry). `registry.json` (schema v2) lists every **parent** and its **forms**; the CLI, the desktop app and the MCP server all read it.
 
-## The model ([ADR-0011](https://github.com/Templetry/wiki/blob/main/adr/0011-template-forms.md))
+## The model ([ADR-0011](https://github.com/Templetry/wiki/blob/main/adr/0011-template-forms.md), [ADR-0014](https://github.com/Templetry/wiki/blob/main/adr/0014-lazy-pieces.md))
 
-- **Parent** = one repo per concept (`kmp`, `android`).
-- **Form** = one structural variant, living as a subdirectory of the parent repo. Each form compiles on its own and carries its own `template.yml`. Forms are *chosen*, not combined.
-- **Features** = the freely combinable axis inside a form (platform targets, capabilities), declared in the form's manifest.
+- **Parent** = one repo per concept (`web`, `go`, `python`…).
+- **Form** = a structural variant living as a subdirectory of the parent. Each form compiles on its own and carries its own `template.yml`. Forms are *chosen*, not combined.
+- **Feature** = the freely combinable axis inside a form, resolved at render time (with `requires`/`conflicts` and named `presets`).
+- **Piece** = a decoupled unit adopted *after* creation, with its own variables and update cycle.
 
-## Parents
+Golden rule: **additive → feature · structural → form · independent lifecycle → piece.**
 
-| Parent | Forms |
-|---|---|
-| [kmp](https://github.com/Templetry/kmp) | `modular-features` ✅ · `single-module` ✅ · `modular-ui` 🏗️ planned |
-| [android](https://github.com/Templetry/android) | `modular-features` ✅ · `single-module` 🏗️ planned |
-| [meta](https://github.com/Templetry/meta) | `template` ✅ — creates new Templetry templates (start your own catalog here) |
+## Parents and forms
+
+Every form is CI-verified: its parent's workflow renders it and builds the output with the real toolchain on every push. `status: ready` is gated on green CI.
+
+| Parent | Forms | Pieces |
+|---|---|---|
+| [kmp](https://github.com/Templetry/kmp) | `modular-features` · `single-module` · `modular-ui` | — |
+| [android](https://github.com/Templetry/android) | `modular-features` · `single-module` | — |
+| [web](https://github.com/Templetry/web) | `react-spa` · `vue-spa` · `nextjs` · `svelte-spa` | `axios-api`, `zustand-store`, `pinia-store`, `zod-env` |
+| [go](https://github.com/Templetry/go) | `cli` · `http-service` · `rest-sqlite` | `version-endpoint`, `crud-resource` |
+| [python](https://github.com/Templetry/python) | `fastapi-service` · `cli-typer` · `fastapi-users` | `rbac`, `api-keys`, `audit-trail`, `soft-delete`, `verifactu`, `crud-resource` |
+| [rust](https://github.com/Templetry/rust) | `cli` · `axum-service` | — |
+| [node](https://github.com/Templetry/node) | `express-api` | — |
+| [jvm](https://github.com/Templetry/jvm) | `spring-boot` | — |
+| [dotnet](https://github.com/Templetry/dotnet) | `minimal-api` | — |
+| [meta](https://github.com/Templetry/meta) | `template` — creates new Templetry templates (start your own catalog here) | — |
 
 ## Using a form
 
-One command — the [CLI](https://github.com/Templetry/engine/releases) (v0.2.0+) reads this registry, fetches the form and renders it:
-
 ```sh
 templetry list
-templetry init kmp/single-module --out ./my-app \
-  --set "project_name=My App" --set "base_package=com.me.myapp" \
-  --feature web=false
+templetry init python/fastapi-users --out ./my-api --set "project_name=My Api"
+
+# later, adopt decoupled pieces
+templetry pieces ./my-api
+templetry add rbac ./my-api
+templetry add crud-resource ./my-api --set entity=Product
+
+# and pull template improvements
+templetry update ./my-api --apply
 ```
 
-`templetry render --template <local-dir>` still works for local checkouts, and `--registry <url|file>` points `init`/`list` at an alternative catalog.
+`--registry <url|file>` points `list`/`init` at an alternative catalog, and `--preset <name>` picks a named feature combo.
 
 ## Registry format
 
-`registry.json` is public API, versioned with `schema_version`. Parents carry `key`, `label`, `repo`, `ref` and `forms`; each form carries `form`, `name` (matches its manifest), `path` (subdirectory), `status` (`ready` | `planned`) and `description`.
+`registry.json` is public API, versioned with `schema_version` (currently 2). Parents carry `key`, `label`, `repo`, `ref`, an optional `source` (forge scheme: `gitlab:host/group/proj`, `gitea:host/owner/repo`; empty means GitHub) and `forms`. Each form carries `form`, `name` (matching its manifest), `path`, `status` (`ready` | `planned`) and `description`.
 
 ## Contributing a form
 
-A form is a subdirectory that compiles on its own with a valid [`template.yml`](https://github.com/Templetry/wiki/blob/main/spec/template-yml.md). Golden rule: additive variation (add/remove files) belongs in an existing form as a **feature**; only structural variation (same code, different layout) justifies a new form.
+A form is a subdirectory that compiles on its own with a valid [`template.yml`](https://github.com/Templetry/wiki/blob/main/spec/template-yml.md), an `AGENTS.md` operating contract, and a job in its parent's Verify workflow. Pieces live in `_pieces/<name>/` (or `pieces/`) with a [`piece.yml`](https://github.com/Templetry/wiki/blob/main/spec/piece-yml.md).
+
+Start from [`meta/template`](https://github.com/Templetry/meta), which scaffolds a template with its manifest, author guide and verify CI already in place.
