@@ -26,21 +26,58 @@
           "name": "kmp-modular-features",
           "path": "modular-features",
           "status": "ready",
-          "description": "Multi-module production base — Android + Desktop + iOS, core/data/domain/feature layers, convention plugins"
+          "description": "Multi-module production base — Android + Desktop + iOS, core/data/domain/feature layers, convention plugins",
+          "kinds": [
+            "multiplatform",
+            "android",
+            "ios",
+            "desktop"
+          ],
+          "languages": [
+            "kotlin"
+          ],
+          "frameworks": [
+            "compose-multiplatform"
+          ]
         },
         {
           "form": "single-module",
           "name": "kmp-single-module",
           "path": "single-module",
           "status": "ready",
-          "description": "Single-module starter — Android, iOS, Desktop and Web/Wasm"
+          "description": "Single-module starter — Android, iOS, Desktop and Web/Wasm",
+          "kinds": [
+            "multiplatform",
+            "android",
+            "ios",
+            "desktop",
+            "frontend"
+          ],
+          "languages": [
+            "kotlin"
+          ],
+          "frameworks": [
+            "compose-multiplatform"
+          ]
         },
         {
           "form": "modular-ui",
           "name": "kmp-modular-ui",
           "path": "modular-ui",
           "status": "ready",
-          "description": "Multi-module base with a single ui layer instead of feature modules"
+          "description": "Multi-module base with a single ui layer instead of feature modules",
+          "kinds": [
+            "multiplatform",
+            "android",
+            "ios",
+            "desktop"
+          ],
+          "languages": [
+            "kotlin"
+          ],
+          "frameworks": [
+            "compose-multiplatform"
+          ]
         }
       ]
     },
@@ -55,7 +92,10 @@
           "name": "meta-template",
           "path": "template",
           "status": "ready",
-          "description": "Create a new Templetry template: pre-filled manifest, author guide, mechanism showcase and verify CI"
+          "description": "Create a new Templetry template: pre-filled manifest, author guide, mechanism showcase and verify CI",
+          "frameworks": [
+            "templetry"
+          ]
         }
       ]
     },
@@ -70,14 +110,33 @@
           "name": "rust-cli",
           "path": "cli",
           "status": "ready",
-          "description": "CLI — clap derive, lib + bin split, unit tests"
+          "description": "CLI — clap derive, lib + bin split, unit tests",
+          "kinds": [
+            "cli"
+          ],
+          "languages": [
+            "rust"
+          ],
+          "frameworks": [
+            "clap"
+          ]
         },
         {
           "form": "axum-service",
           "name": "rust-axum-service",
           "path": "axum-service",
           "status": "ready",
-          "description": "HTTP service — axum + tokio, handler tests, optional Dockerfile"
+          "description": "HTTP service — axum + tokio, handler tests, optional Dockerfile",
+          "kinds": [
+            "backend"
+          ],
+          "languages": [
+            "rust"
+          ],
+          "frameworks": [
+            "axum",
+            "tokio"
+          ]
         }
       ]
     },
@@ -92,21 +151,43 @@
           "name": "go-cli",
           "path": "cli",
           "status": "ready",
-          "description": "CLI starter — stdlib flags, versioned binary, table-driven tests"
+          "description": "CLI starter — stdlib flags, versioned binary, table-driven tests",
+          "kinds": [
+            "cli"
+          ],
+          "languages": [
+            "go"
+          ]
         },
         {
           "form": "http-service",
           "name": "go-http-service",
           "path": "http-service",
           "status": "ready",
-          "description": "HTTP service — stdlib mux (1.22 patterns), httptest suite, distroless Dockerfile"
+          "description": "HTTP service — stdlib mux (1.22 patterns), httptest suite, distroless Dockerfile",
+          "kinds": [
+            "backend"
+          ],
+          "languages": [
+            "go"
+          ]
         },
         {
           "form": "rest-sqlite",
           "name": "go-rest-sqlite",
           "path": "rest-sqlite",
           "status": "ready",
-          "description": "REST API over SQLite — pure-Go driver (no CGO), migrations, repositories, crud-resource piece per entity"
+          "description": "REST API over SQLite — pure-Go driver (no CGO), migrations, repositories, crud-resource piece per entity",
+          "kinds": [
+            "backend",
+            "database"
+          ],
+          "languages": [
+            "go"
+          ],
+          "frameworks": [
+            "sqlite"
+          ]
         }
       ]
     },
@@ -121,7 +202,16 @@
           "name": "node-express-api",
           "path": "express-api",
           "status": "ready",
-          "description": "Express API — TypeScript (NodeNext), Vitest, optional Dockerfile, presets full/minimal"
+          "description": "Express API — TypeScript (NodeNext), Vitest, optional Dockerfile, presets full/minimal",
+          "kinds": [
+            "backend"
+          ],
+          "languages": [
+            "typescript"
+          ],
+          "frameworks": [
+            "express"
+          ]
         }
       ]
     },
@@ -136,21 +226,50 @@
           "name": "python-fastapi-service",
           "path": "fastapi-service",
           "status": "ready",
-          "description": "FastAPI service — src layout, pytest with TestClient, optional Dockerfile"
+          "description": "FastAPI service — src layout, pytest with TestClient, optional Dockerfile",
+          "kinds": [
+            "backend"
+          ],
+          "languages": [
+            "python"
+          ],
+          "frameworks": [
+            "fastapi"
+          ]
         },
         {
           "form": "cli-typer",
           "name": "python-cli-typer",
           "path": "cli-typer",
           "status": "ready",
-          "description": "CLI — Typer commands, src layout, pytest with CliRunner"
+          "description": "CLI — Typer commands, src layout, pytest with CliRunner",
+          "kinds": [
+            "cli"
+          ],
+          "languages": [
+            "python"
+          ],
+          "frameworks": [
+            "typer"
+          ]
         },
         {
           "form": "fastapi-users",
           "name": "python-fastapi-users",
           "path": "fastapi-users",
           "status": "ready",
-          "description": "User management API — SQLModel/SQLite, argon2 hashing, JWT auth, crud-resource piece per entity"
+          "description": "User management API — SQLModel/SQLite, argon2 hashing, JWT auth, crud-resource piece per entity",
+          "kinds": [
+            "backend",
+            "database"
+          ],
+          "languages": [
+            "python"
+          ],
+          "frameworks": [
+            "fastapi",
+            "sqlmodel"
+          ]
         }
       ]
     },
@@ -165,7 +284,17 @@
           "name": "jvm-spring-boot",
           "path": "spring-boot",
           "status": "ready",
-          "description": "Spring Boot service — Kotlin, Gradle Kotlin DSL, web starter, RANDOM_PORT tests"
+          "description": "Spring Boot service — Kotlin, Gradle Kotlin DSL, web starter, RANDOM_PORT tests",
+          "kinds": [
+            "backend"
+          ],
+          "languages": [
+            "kotlin"
+          ],
+          "frameworks": [
+            "spring-boot",
+            "gradle"
+          ]
         }
       ]
     },
@@ -180,14 +309,34 @@
           "name": "dotnet-minimal-api",
           "path": "minimal-api",
           "status": "ready",
-          "description": "Minimal API — C# top-level program, xUnit with WebApplicationFactory"
+          "description": "Minimal API — C# top-level program, xUnit with WebApplicationFactory",
+          "kinds": [
+            "backend"
+          ],
+          "languages": [
+            "csharp"
+          ],
+          "frameworks": [
+            "aspnetcore"
+          ]
         },
         {
           "form": "razor-web",
           "name": "dotnet-razor-web",
           "path": "razor-web",
           "status": "ready",
-          "description": "Razor Pages web app — shared layout, static files, server-side validation, xUnit with WebApplicationFactory"
+          "description": "Razor Pages web app — shared layout, static files, server-side validation, xUnit with WebApplicationFactory",
+          "kinds": [
+            "frontend",
+            "backend"
+          ],
+          "languages": [
+            "csharp"
+          ],
+          "frameworks": [
+            "aspnetcore",
+            "razor-pages"
+          ]
         }
       ]
     },
@@ -202,28 +351,69 @@
           "name": "web-react-spa",
           "path": "react-spa",
           "status": "ready",
-          "description": "React SPA — Vite + TypeScript, optional Router and Vitest, presets full/minimal"
+          "description": "React SPA — Vite + TypeScript, optional Router and Vitest, presets full/minimal",
+          "kinds": [
+            "frontend"
+          ],
+          "languages": [
+            "typescript"
+          ],
+          "frameworks": [
+            "react",
+            "vite"
+          ]
         },
         {
           "form": "vue-spa",
           "name": "web-vue-spa",
           "path": "vue-spa",
           "status": "ready",
-          "description": "Vue 3 SPA — Vite + TypeScript, script setup, optional Router and Vitest"
+          "description": "Vue 3 SPA — Vite + TypeScript, script setup, optional Router and Vitest",
+          "kinds": [
+            "frontend"
+          ],
+          "languages": [
+            "typescript"
+          ],
+          "frameworks": [
+            "vue",
+            "vite"
+          ]
         },
         {
           "form": "nextjs",
           "name": "web-nextjs",
           "path": "nextjs",
           "status": "ready",
-          "description": "Next.js app — App Router, TypeScript, optional route handler API and Vitest"
+          "description": "Next.js app — App Router, TypeScript, optional route handler API and Vitest",
+          "kinds": [
+            "frontend",
+            "backend"
+          ],
+          "languages": [
+            "typescript"
+          ],
+          "frameworks": [
+            "nextjs",
+            "react"
+          ]
         },
         {
           "form": "svelte-spa",
           "name": "web-svelte-spa",
           "path": "svelte-spa",
           "status": "ready",
-          "description": "Svelte 5 SPA — Vite + TypeScript, runes, optional Vitest"
+          "description": "Svelte 5 SPA — Vite + TypeScript, runes, optional Vitest",
+          "kinds": [
+            "frontend"
+          ],
+          "languages": [
+            "typescript"
+          ],
+          "frameworks": [
+            "svelte",
+            "vite"
+          ]
         }
       ]
     },
@@ -238,14 +428,32 @@
           "name": "android-modular-features",
           "path": "modular-features",
           "status": "ready",
-          "description": "Multi-module production base — core/data/domain/feature layers, convention plugins, Compose"
+          "description": "Multi-module production base — core/data/domain/feature layers, convention plugins, Compose",
+          "kinds": [
+            "android"
+          ],
+          "languages": [
+            "kotlin"
+          ],
+          "frameworks": [
+            "jetpack-compose"
+          ]
         },
         {
           "form": "single-module",
           "name": "android-single-module",
           "path": "single-module",
           "status": "ready",
-          "description": "Single-module starter — one app module, Kotlin + Compose Material 3, selectable min SDK"
+          "description": "Single-module starter — one app module, Kotlin + Compose Material 3, selectable min SDK",
+          "kinds": [
+            "android"
+          ],
+          "languages": [
+            "kotlin"
+          ],
+          "frameworks": [
+            "jetpack-compose"
+          ]
         }
       ]
     }
