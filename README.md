@@ -53,4 +53,4 @@ templetry update ./my-api --apply
 
 A form is a subdirectory that compiles on its own with a valid [`template.yml`](https://github.com/Templetry/wiki/blob/main/spec/template-yml.md), an `AGENTS.md` operating contract, and a job in its parent's Verify workflow. Pieces live in `_pieces/<name>/` (or `pieces/`) with a [`piece.yml`](https://github.com/Templetry/wiki/blob/main/spec/piece-yml.md).
 
-Start from [`meta/template`](https://github.com/Templetry/meta), which scaffolds a template with its manifest, author guide and verify CI already in place.
+Start from [`meta/template`](https://github.com/Templetry/meta), which scaffolds a template with its manifest, author guide and verify CI already in place. Step by step: [authoring templates](https://github.com/Templetry/wiki/blob/main/guide/authoring-templates.md) and [authoring pieces](https://github.com/Templetry/wiki/blob/main/guide/authoring-pieces.md).
