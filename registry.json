@@ -1,5 +1,19 @@
 {
   "schema_version": 2,
+  "pieces": [
+    {
+      "name": "renovate",
+      "repo": "Templetry/pieces",
+      "ref": "main",
+      "path": "renovate"
+    },
+    {
+      "name": "audit-trail",
+      "repo": "Templetry/pieces",
+      "ref": "main",
+      "path": "audit-trail-go-sqlite"
+    }
+  ],
   "parents": [
     {
       "key": "kmp",
