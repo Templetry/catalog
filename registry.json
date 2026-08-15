@@ -212,6 +212,38 @@
           "frameworks": [
             "express"
           ]
+        },
+        {
+          "form": "fastify-api",
+          "name": "node-fastify-api",
+          "path": "fastify-api",
+          "status": "ready",
+          "description": "Fastify API — routes as plugins, JSON Schema validation enforced, optional OpenAPI, Vitest via inject()",
+          "kinds": [
+            "backend"
+          ],
+          "languages": [
+            "typescript"
+          ],
+          "frameworks": [
+            "fastify"
+          ]
+        },
+        {
+          "form": "nestjs",
+          "name": "node-nestjs",
+          "path": "nestjs",
+          "status": "ready",
+          "description": "NestJS service — modules and DI, optional DTO validation with a strict global pipe, Jest unit + e2e",
+          "kinds": [
+            "backend"
+          ],
+          "languages": [
+            "typescript"
+          ],
+          "frameworks": [
+            "nestjs"
+          ]
         }
       ]
     },
@@ -293,6 +325,23 @@
           ],
           "frameworks": [
             "spring-boot",
+            "gradle"
+          ]
+        },
+        {
+          "form": "ktor",
+          "name": "jvm-ktor",
+          "path": "ktor",
+          "status": "ready",
+          "description": "Ktor 3 service — routes as extensions, kotlinx.serialization, StatusPages, testApplication suite",
+          "kinds": [
+            "backend"
+          ],
+          "languages": [
+            "kotlin"
+          ],
+          "frameworks": [
+            "ktor",
             "gradle"
           ]
         }

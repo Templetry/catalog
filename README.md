@@ -23,8 +23,8 @@ Every form is CI-verified: its parent's workflow renders it and builds the outpu
 | [go](https://github.com/Templetry/go) | `cli` · `http-service` · `rest-sqlite` | `version-endpoint`, `crud-resource` |
 | [python](https://github.com/Templetry/python) | `fastapi-service` · `cli-typer` · `fastapi-users` | `rbac`, `api-keys`, `audit-trail`, `soft-delete`, `verifactu`, `crud-resource` |
 | [rust](https://github.com/Templetry/rust) | `cli` · `axum-service` | — |
-| [node](https://github.com/Templetry/node) | `express-api` | — |
-| [jvm](https://github.com/Templetry/jvm) | `spring-boot` | — |
+| [node](https://github.com/Templetry/node) | `express-api` · `fastify-api` · `nestjs` | — |
+| [jvm](https://github.com/Templetry/jvm) | `spring-boot` · `ktor` | — |
 | [dotnet](https://github.com/Templetry/dotnet) | `minimal-api` · `razor-web` | — |
 | [meta](https://github.com/Templetry/meta) | `template` — creates new Templetry templates (start your own catalog here) | — |
 
