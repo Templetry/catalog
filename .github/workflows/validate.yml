@@ -1,0 +1,34 @@
+name: Validate registry
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Weekly. Most of what this catches is not in this repo: a form renamed
+    # or a manifest edited in a parent leaves the registry pointing at
+    # nothing, and no push here would reveal it.
+    - cron: "0 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Registry describes something that exists
+        env:
+          # Raises the API rate limit and reads private forks if the catalog
+          # ever lists one.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node bin/validate.mjs
