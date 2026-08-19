@@ -145,4 +145,4 @@ for (const p of reg.parents ?? []) {
 for (const w of warnings) console.log(`::warning::${w}`);
 for (const e of errors) console.log(`::error::${e}`);
 console.log(`\n${jobs.length} entries checked · ${errors.length} errors · ${warnings.length} warnings`);
-process.exit(errors.length ? 1 : 0);
+process.exitCode = errors.length ? 1 : 0;
