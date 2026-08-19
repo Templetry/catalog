@@ -1,0 +1,96 @@
+name: Propose a form
+description: A new template for an ecosystem — or a whole new parent
+title: "form: "
+labels: ["form", "proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before filling this in, it is worth generating the thing:
+        `templetry init meta/template --out ./my-form`. Half the questions
+        below answer themselves once you have a manifest in front of you.
+
+  - type: input
+    id: what
+    attributes:
+      label: What does it generate?
+      description: One sentence, the way it would read in the catalog.
+      placeholder: "Deno HTTP service — Oak router, Zod validation, built-in test runner"
+    validations:
+      required: true
+
+  - type: input
+    id: parent
+    attributes:
+      label: Which parent?
+      description: An existing one, or "new" and its proposed key.
+      placeholder: "node — or: new, key `deno`"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kinds
+    attributes:
+      label: Kinds (ADR-0017)
+      description: The closed vocabulary. Pick every one that is true of the generated project.
+      multiple: true
+      options:
+        - frontend
+        - backend
+        - database
+        - infra
+        - multiplatform
+        - android
+        - ios
+        - desktop
+        - cli
+    validations:
+      required: true
+
+  - type: input
+    id: axes
+    attributes:
+      label: Languages and frameworks
+      description: Open axes, kebab-case.
+      placeholder: "languages: typescript · frameworks: oak, deno"
+    validations:
+      required: true
+
+  - type: textarea
+    id: features
+    attributes:
+      label: Which parts are optional?
+      description: >
+        Each becomes a feature. Remember the rule — additive is a feature,
+        structural is a separate form, independent lifecycle is a piece.
+      placeholder: |
+        - docker: Dockerfile (default on)
+        - openapi: generated API docs (default on)
+    validations:
+      required: true
+
+  - type: textarea
+    id: verify
+    attributes:
+      label: How does CI build it?
+      description: The image and command, or why a Linux container cannot do it.
+      placeholder: "image: denoland/deno:latest · run: deno task build && deno task test"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: bar
+    attributes:
+      label: The bar
+      options:
+        - label: It will be a real project that builds, not a skeleton with placeholders (ADR-0003)
+          required: true
+        - label: It will ship development / staging / production using this ecosystem's own mechanism (ADR-0018)
+          required: true
+
+  - type: input
+    id: who
+    attributes:
+      label: Are you offering to build it?
+      description: Entirely fine either way — a good proposal is useful on its own.
+      placeholder: "yes / I would need a hand with the CI part / just proposing"
