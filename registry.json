@@ -12,6 +12,12 @@
       "repo": "Templetry/pieces",
       "ref": "main",
       "path": "audit-trail-go-sqlite"
+    },
+    {
+      "name": "agent-pointers",
+      "repo": "Templetry/pieces",
+      "ref": "main",
+      "path": "agent-pointers"
     }
   ],
   "parents": [
