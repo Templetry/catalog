@@ -490,7 +490,7 @@
           "form": "react-router-ssr",
           "name": "web-react-router-ssr",
           "path": "react-router-ssr",
-          "status": "draft",
+          "status": "ready",
           "description": "React Router 8 server-rendered on Cloudflare Workers — indexable pages, typed bindings, Wrangler deploy",
           "kinds": [
             "frontend",
