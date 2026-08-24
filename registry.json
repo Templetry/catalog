@@ -89,7 +89,7 @@
           "form": "library",
           "name": "kmp-library",
           "path": "library",
-          "status": "draft",
+          "status": "ready",
           "description": "Shared library — published to Maven for Android, JVM and iOS consumers, no UI",
           "kinds": [
             "multiplatform",
