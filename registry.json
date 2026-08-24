@@ -84,6 +84,22 @@
           "frameworks": [
             "compose-multiplatform"
           ]
+        },
+        {
+          "form": "library",
+          "name": "kmp-library",
+          "path": "library",
+          "status": "draft",
+          "description": "Shared library — published to Maven for Android, JVM and iOS consumers, no UI",
+          "kinds": [
+            "multiplatform",
+            "android",
+            "ios"
+          ],
+          "languages": [
+            "kotlin"
+          ],
+          "frameworks": []
         }
       ]
     },
