@@ -20,6 +20,12 @@
       "path": "doppler"
     },
     {
+      "name": "doppler",
+      "repo": "Templetry/pieces",
+      "ref": "main",
+      "path": "doppler-android"
+    },
+    {
       "name": "agent-pointers",
       "repo": "Templetry/pieces",
       "ref": "main",
@@ -575,6 +581,32 @@
           "frameworks": [
             "swiftui",
             "xcodegen"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "browser-extension",
+      "label": "Browser extension",
+      "repo": "Templetry/browser-extension",
+      "ref": "main",
+      "forms": [
+        {
+          "form": "wxt-svelte",
+          "name": "browser-extension-wxt-svelte",
+          "path": "wxt-svelte",
+          "status": "draft",
+          "description": "Chromium extension (Manifest V3) — WXT + Svelte 5 + TypeScript, popup and service worker, optional options page, content script and Vitest",
+          "kinds": [
+            "frontend"
+          ],
+          "languages": [
+            "typescript"
+          ],
+          "frameworks": [
+            "wxt",
+            "svelte",
+            "vite"
           ]
         }
       ]
