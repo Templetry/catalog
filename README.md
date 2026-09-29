@@ -27,6 +27,7 @@ Every form is CI-verified: its parent's workflow renders it and builds the outpu
 | [node](https://github.com/Templetry/node) | `express-api` · `fastify-api` · `nestjs` | — |
 | [jvm](https://github.com/Templetry/jvm) | `spring-boot` · `ktor` | — |
 | [dotnet](https://github.com/Templetry/dotnet) | `minimal-api` · `razor-web` | — |
+| [browser-extension](https://github.com/Templetry/browser-extension) | `wxt-svelte` | — |
 | [meta](https://github.com/Templetry/meta) | `template` — creates new Templetry templates (start your own catalog here) | — |
 
 ## Using a form
