@@ -14,6 +14,12 @@
       "path": "audit-trail-go-sqlite"
     },
     {
+      "name": "doppler",
+      "repo": "Templetry/pieces",
+      "ref": "main",
+      "path": "doppler"
+    },
+    {
       "name": "agent-pointers",
       "repo": "Templetry/pieces",
       "ref": "main",
