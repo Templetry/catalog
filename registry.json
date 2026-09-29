@@ -595,7 +595,7 @@
           "form": "wxt-svelte",
           "name": "browser-extension-wxt-svelte",
           "path": "wxt-svelte",
-          "status": "draft",
+          "status": "ready",
           "description": "Chromium extension (Manifest V3) — WXT + Svelte 5 + TypeScript, popup and service worker, optional options page, content script and Vitest",
           "kinds": [
             "frontend"
